@@ -1,3 +1,4 @@
+"use client"
 import {
   Map,
   MapControls,
@@ -8,51 +9,41 @@ import {
 } from "@/components/ui/map"
 import { Card } from "@/components/ui/card"
 import Image from "next/image"
-import { Clock, ExternalLink, MapPin, Navigation, Star } from "lucide-react"
+import { Clock, MapPin, Navigation, Star } from "lucide-react"
 import { Button } from "./ui/button"
+import { useTheme } from "next-themes"
+import Link from "next/link"
+import {attractionsData } from "@/data/attractionsData"
+import type { Place } from "@/types/attractionsType"
 
-interface Place {
-  id: number
-  name: string
-  label: string
-  category: string
-  rating: number
-  reviews: number
-  hours: string
-  image: string
-  lng: number
-  lat: number
-}
 
-const place: Place = {
-  id: 1,
-  name: "Latarnia Morska",
-  label: "Latarnia Morska",
-  category: "Latarnia Morska",
-  rating: 4.8,
-  reviews: 12453,
-  hours: "10:00 - 18:00",
-  image: "/Latarnia_morska.jpg",
-  lng: 15.554239,
-  lat: 54.186395,
-}
 
 export function MyMap() {
+  const { theme } = useTheme()
   return (
-    <Card className='h-[480px] w-[840px] p-0 overflow-hidden'>
-      <Map center={[15.583267, 54.175919]} zoom={13} className='' theme='light'>
-        <MapMarker key={place.id} longitude={place.lng} latitude={place.lat}>
-          <MarkerContent>
-            <MapPin color="red" className="size-6 cursor-pointer hover:scale-110 transition-transform" />
+    <Card className=' h-[480px] md:w-[840px] w-full p-0 overflow-hidden shadow-2xl'>
+      <Map
+        center={[15.583267, 54.175919]}
+        zoom={13}
+        
+        theme={(theme as "light" | "dark") || "dark"}
+      >
+        {attractionsData.map((place: Place) => (
+        <MapMarker key={place.id} longitude={place.lng} latitude={place.lat} >
+          <MarkerContent >
+            <MapPin
+              color='red'
+              className='size-6 cursor-pointer hover:scale-110 transition-transform'
+            />
             <MarkerLabel position='bottom'>{place.label}</MarkerLabel>
           </MarkerContent>
-          <MarkerPopup className='p-0 w-62'>
-            <div className='relative h-32 overflow-hidden rounded-t-md'>
+          <MarkerPopup className=' p-0 w-62'>
+            <div className='relative h-48 overflow-hidden rounded-t-md'>
               <Image
                 fill
                 src={place.image}
                 alt={place.name}
-                className='object-cover'
+                className='object-cover object-top'
               />
             </div>
             <div className='space-y-2 p-3'>
@@ -78,17 +69,18 @@ export function MyMap() {
                 <span>{place.hours}</span>
               </div>
               <div className='flex gap-2 pt-1'>
-                <Button size='sm' className='flex-1 h-8'>
-                  <Navigation className='size-3.5 mr-1.5' />
-                  Szczegóły
+                <Button asChild size='sm' className='flex-1 h-8 bg-accent dark:text-black'>
+                  <Link href={`/attractions/${place.id}`} className="flex items-center">
+                    <Navigation className='size-3.5 mr-1.5' />
+                    Szczegóły
+                  </Link>
                 </Button>
-                <Button size='sm' variant='outline' className='h-8'>
-                  <ExternalLink className='size-3.5' />
-                </Button>
+                
               </div>
             </div>
           </MarkerPopup>
         </MapMarker>
+        ))}
         <MapControls />
       </Map>
     </Card>
