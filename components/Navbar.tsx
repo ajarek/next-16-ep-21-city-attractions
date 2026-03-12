@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { ModeToggle } from "./ModeToggle"
 import Link from "next/link"
+import { SheetNav } from "./SheetNav"
 
 const Navbar = () => {
   return (
@@ -11,7 +12,10 @@ const Navbar = () => {
             </div>
             <h1 className="text-2xl text-accent font-bold ">Kołobrzeg - Atrakcje</h1>
         </Link>
+        <div className="flex items-center gap-4">
+         <SheetNav />
         <ModeToggle />
+        </div>
     </div>
   )
 }

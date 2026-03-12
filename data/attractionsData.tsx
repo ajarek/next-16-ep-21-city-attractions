@@ -152,7 +152,7 @@ export const attractionsData =
   lng: 15.57641,
   lat: 54.17599,
   price: "Bezpłatny",
-  description: "Neogotycki, dwukondygnacyjny budynek w kształcie litery C. Zbudowany na piwnicach pochodzących z XV wieku. Z otwartym dziedzińcem pośrodku, otoczonym arkadowymi galeriami. Budynek przypomina wyglądem średniowieczny zamek obronny. Udekorowany jest wieżyczkami i blankowaniem. Pośrodku główna wieża z zegarem, herbami Kołobrzegu i Polski[1]. Zabytkowy zegar został zdjęty w 2014 roku i został powieszony jako atrakcja w kołobrzeskim muzeum Patria Colbergiensis."
+  description: "Neogotycki, dwukondygnacyjny budynek w kształcie litery C. Zbudowany na piwnicach pochodzących z XV wieku. Z otwartym dziedzińcem pośrodku, otoczonym arkadowymi galeriami. Budynek przypomina wyglądem średniowieczny zamek obronny. Udekorowany jest wieżyczkami i blankowaniem. Pośrodku główna wieża z zegarem, herbami Kołobrzegu i Polski. Zabytkowy zegar został zdjęty w 2014 roku i został powieszony jako atrakcja w kołobrzeskim muzeum Patria Colbergiensis."
 },
 {
   id: 12,
