@@ -168,5 +168,33 @@ export const attractionsData =
   price: "Bezpłatny",
   description: "Pomnik Poległych w Walkach o Kołobrzeg (1945) znajduje się na placu 18 Marca i jest najstarszym pomnikiem w powojennym Kołobrzegu, odsłoniętym 18 marca 1948 r.. Obelisk z betonu, zwieńczony orłem bez korony, upamiętnia polskich i sowieckich żołnierzy poległych w marcu 1945 r."
 },
+{
+  id: 13,
+  name: "Amfiteatr ",
+  label: "Amfiteatr ",
+  category: "Amfiteatr ",
+  rating: 4.5,
+  reviews: 13453,
+  hours: "Godziny otwarcia zależą od wybranego wydarzenia.",
+  image: "/Amfiteatr.jpg",
+  lng: 15.5933,
+  lat: 54.18525,
+  price: "Ceny biletów zależą od wybranego wydarzenia.",
+  description: "Kołobrzeski Amfiteatr to miejsce o bogatej tradycji artystycznej, które od lat przyciąga zarówno publiczność, jak i twórców z całego świata. Usytuowany na pozostałościach Fortu Wilczego, w bezpośrednim sąsiedztwie zielonego Parku im. Aleksandra Fredry, stanowi charakterystyczny punkt na mapie kulturalnej Polski. Przez lata znany z Festiwalu Piosenki Żołnierskiej, dziś jest nowoczesną sceną, na której co roku występują artyści reprezentujący różnorodne gatunki muzyczne."
+},
+{
+  id: 14,
+  name: "Muszla Koncertowa ",
+  label: "Muszla Koncertowa ",
+  category: "Muszla Koncertowa ",
+  rating: 4.5,
+  reviews: 13453,
+  hours: "24/7",
+  image: "/Muszla.jpg",
+  lng: 15.5740,
+  lat: 54.1853,
+  price: "Bezpłatny",
+  description: "Muszla koncertowa w parku nadmorskim to jedno z najbardziej rozpoznawalnych miejsc Kołobrzegu. Obiekt zyskał nowe życie. Odbywać się tu mogą liczne koncerty i imprezy, które obejmują bogaty program artystyczno-rozrywkowy, od koncertów i pokazów tańca, przez kino plenerowe, aż po atrakcje dla najmłodszych."
+},
 
 ]

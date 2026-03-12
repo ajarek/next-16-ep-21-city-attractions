@@ -133,3 +133,15 @@
     @apply hidden!;
   }
 }
+.sheet-content::-webkit-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: oklch(var(--sidebar-accent)) oklch(var(--sidebar)) !important;
+}
+
+.sheet-content::-webkit-scrollbar-track {
+	background: oklch(var(--sidebar));
+}
+
+.sheet-content::-webkit-scrollbar-thumb {
+	background-color: oklch(var(--sidebar-accent));
+}

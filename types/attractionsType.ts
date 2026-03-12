@@ -10,4 +10,5 @@ export interface Place {
   lng: number
   lat: number
   price: string
+  description: string
 }

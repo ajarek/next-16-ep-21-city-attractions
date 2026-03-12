@@ -34,7 +34,7 @@ export function SheetNav() {
           <p>Lista Atrakcji</p>
         </TooltipContent>
       </Tooltip>
-      <SheetContent className='  opacity-75'>
+      <SheetContent className='  opacity-75 overflow-y-auto sheet-content'>
         <SheetHeader>
           <SheetTitle className='text-xl font-semibold underline underline-offset-4'>
             Lista Atrakcji
@@ -70,7 +70,7 @@ export function SheetNav() {
               className='flex items-center gap-2 text-lg text-accent font-semibold w-fit'
             >
               <Mail className='size-6' />
-              <span className="text-black">Kontakt</span>
+              <span className="text-accent">Kontakt</span>
             </Link>
           
         </SheetFooter>
